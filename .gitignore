@@ -1,0 +1,21 @@
+# Node / frontend artifacts
+node_modules/
+frontend/node_modules/
+frontend/build/
+
+# Go build cache / binaries
+backend/ui/build/
+backend/bin/
+/dist/
+
+# Database data
+.pgdata/
+
+# OS / editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Debian packages produced locally
+dist/*.deb
