@@ -1,0 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Handle, Position } from 'reactflow';
+export function PlanNode({ data }) {
+    return (_jsxs("div", { className: "plan-node", children: [_jsx(Handle, { type: "target", position: Position.Left, className: "plan-node__handle plan-node__handle--left" }), _jsxs("div", { className: "plan-node__header", children: [_jsx("span", { className: "plan-node__type", children: data.nodeType }), data.subtitle ? _jsx("span", { className: "plan-node__subtitle", children: data.subtitle }) : null] }), _jsx("dl", { className: "plan-node__metrics", children: data.metrics.map((metric) => (_jsxs("div", { className: "plan-node__metric", children: [_jsx("dt", { children: metric.label }), _jsx("dd", { children: metric.value })] }, metric.label))) }), data.filter ? (_jsxs("div", { className: "plan-node__filter", children: [_jsx("span", { className: "plan-node__filter-label", children: "Filter" }), _jsx("span", { className: "plan-node__filter-value", children: data.filter })] })) : null, _jsx(Handle, { type: "source", position: Position.Right, className: "plan-node__handle plan-node__handle--right" })] }));
+}

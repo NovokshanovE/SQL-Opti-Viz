@@ -1,0 +1,9 @@
+{
+  "Plan": {
+    "Node Type": "Seq Scan",
+    "Relation Name": "users",
+    "Alias": "users",
+    "Filter": "(lower(email) ~~ '%gmail.com'::text)",
+    "Plans": []
+  }
+}

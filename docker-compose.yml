@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: ${BACKEND_IMAGE_NAME:-sql-opti-viz-backend:latest}
+    container_name: ${BACKEND_CONTAINER_NAME:-sql-opti-viz-backend}
+    ports:
+      - "${API_PORT:-8080}:8080"
+    environment:
+      - PORT=8080
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: ${FRONTEND_IMAGE_NAME:-sql-opti-viz-frontend:latest}
+    container_name: ${FRONTEND_CONTAINER_NAME:-sql-opti-viz-frontend}
+    ports:
+      - "${FRONTEND_PORT:-3030}:3000"
+    depends_on:
+      - backend
+

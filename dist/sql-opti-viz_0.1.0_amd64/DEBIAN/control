@@ -1,0 +1,8 @@
+Package: sql-opti-viz
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: sql-opti-viz <maintainer@example.com>
+Description: SQL Opti Viz server and CLI
+ This package installs the optiviz HTTP server and the optiviz-cli tool.
